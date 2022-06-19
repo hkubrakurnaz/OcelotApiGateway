@@ -14,7 +14,8 @@
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []
-      }
+      },
+      "Key": "Location"
     },
     {
       "DownstreamPathTemplate": "/api/auths",
@@ -38,8 +39,15 @@
         }
       ],
       "UpstreamPathTemplate": "/marketing/{id}",
-      "UpstreamHttpMethod": [ "Get" ]
-    
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "Marketing"
+    }
+  ],
+
+  "Aggregates": [
+    {
+      "RouteKeys": [ "Marketing", "Location" ],
+      "UpstreamPathTemplate": "/marketing-with-location/{id}"
     }
   ]
 }

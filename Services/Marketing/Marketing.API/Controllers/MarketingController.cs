@@ -17,9 +17,9 @@ namespace Marketing.API.Controllers
 
         // GET api/<MarketingController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public IActionResult Get(int id)
         {
-            return "marketing";
+            return Ok(new { Marketing =  "marketing" });
         }
 
         // POST api/<MarketingController>
