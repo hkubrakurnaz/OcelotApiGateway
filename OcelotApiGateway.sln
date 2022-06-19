@@ -11,13 +11,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{CE
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Marketing", "Marketing", "{949E1608-DC76-47AD-83D6-9D907475193F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Location.API", "Services\Location\Location.API\Location.API.csproj", "{059C83F1-D8C5-4BC8-B5B4-CFFBBB0455EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Location.API", "Services\Location\Location.API\Location.API.csproj", "{059C83F1-D8C5-4BC8-B5B4-CFFBBB0455EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketing.API", "Services\Marketing\Marketing.API\Marketing.API.csproj", "{2EAD8678-28B6-4D72-B990-095FA9D99F8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marketing.API", "Services\Marketing\Marketing.API\Marketing.API.csproj", "{2EAD8678-28B6-4D72-B990-095FA9D99F8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIGateway", "APIGateway\APIGateway.csproj", "{5088D0DC-8527-4E6D-B634-1258E3C5A62D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIGateway", "APIGateway\APIGateway.csproj", "{5088D0DC-8527-4E6D-B634-1258E3C5A62D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.API", "Services\Identity\Identity.API\Identity.API.csproj", "{0F922E63-ED6F-46C5-8CF6-CCFC3D15D26F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.API", "Services\Identity\Identity.API\Identity.API.csproj", "{0F922E63-ED6F-46C5-8CF6-CCFC3D15D26F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
