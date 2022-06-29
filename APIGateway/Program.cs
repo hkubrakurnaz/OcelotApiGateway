@@ -1,8 +1,10 @@
+using APIGateway.Logger;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 using System.Text;
+using Ocelot.Cache.CacheManager;
 
 IConfiguration configuration = new ConfigurationBuilder()
                             .AddJsonFile("ocelot.json")
@@ -31,7 +33,9 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
-builder.Services.AddOcelot(configuration);
+builder.Services.AddOcelot(configuration)
+    .AddDelegatingHandler<RequestLogger>()
+    .AddCacheManager(settings => settings.WithDictionaryHandle());
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

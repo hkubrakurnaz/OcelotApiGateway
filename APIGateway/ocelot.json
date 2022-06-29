@@ -1,4 +1,11 @@
 ﻿{
+  "GlobalConfiguration": {
+    "RateLimitOptions": {
+      "DisableRateLimitHeaders": false,
+      "QuotaExceededMessage": "Customize Tips!",
+      "HttpStatusCode": 429
+    }
+  },
   "Routes": [
     {
       "DownstreamPathTemplate": "/api/Locations/{id}",
@@ -15,7 +22,8 @@
         "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []
       },
-      "Key": "Location"
+      "Key": "Location",
+      "FileCacheOptions": { "TtlSeconds": 15 }
     },
     {
       "DownstreamPathTemplate": "/api/auths",
@@ -40,7 +48,14 @@
       ],
       "UpstreamPathTemplate": "/marketing/{id}",
       "UpstreamHttpMethod": [ "Get" ],
-      "Key": "Marketing"
+      "Key": "Marketing",
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "3s",
+        "PeriodTimespan": 10,
+        "Limit": 1
+      }
     }
   ],
 
